@@ -1,0 +1,1153 @@
+>> The raw data of the experiments:
+
+I. How does the degree of cache associativity affect cache performance?
+
+* spec92 files
+I) 16 KB cache
+1. traces/spec92/008.espresso.din.gz
+1) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 16 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         8674    0.619   183744          367488          31.237
+WRITE:  330960          2499    0.755   53619           107238          37.440
+TOTAL:  1733272         11173   0.645   237363          474726          32.421
+
+2) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 16 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         1801    0.128   41840           83680           10.974
+WRITE:  330960          1953    0.590   48465           96930           34.317
+TOTAL:  1733272         3754    0.217   90305           180610          15.431
+
+3) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 16 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         1126    0.080   26352           52704           8.762
+WRITE:  330960          1655    0.500   41687           83374           30.217
+TOTAL:  1733272         2781    0.160   68039           136078          12.859
+
+4) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 16 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         1127    0.080   25328           50656           8.616
+WRITE:  330960          1673    0.505   43097           86194           31.069
+TOTAL:  1733272         2800    0.162   68425           136850          12.904
+
+5) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 16 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         1156    0.082   26128           52256           8.731
+WRITE:  330960          1659    0.501   42315           84630           30.596
+TOTAL:  1733272         2815    0.162   68443           136886          12.906
+
+6) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 16 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         1186    0.085   26608           53216           8.799
+WRITE:  330960          1661    0.502   42397           84794           30.646
+TOTAL:  1733272         2847    0.164   69005           138010          12.971
+
+7) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 16 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         1186    0.085   26320           52640           8.758
+WRITE:  330960          1669    0.504   42789           85578           30.883
+TOTAL:  1733272         2855    0.165   69109           138218          12.983
+
+8) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 16 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         1197    0.085   26384           52768           8.767
+WRITE:  330960          1675    0.506   43051           86102           31.041
+TOTAL:  1733272         2872    0.166   69435           138870          13.020
+
+9) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 16 32 256 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         1208    0.086   26720           53440           8.815
+WRITE:  330960          1669    0.504   42661           85322           30.805
+TOTAL:  1733272         2877    0.166   69381           138762          13.014
+
+2. traces/spec92/023.eqntott.din.gz
+1) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 16 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         24875   1.471   526064          1052128         67.273
+WRITE:  531607          12104   2.277   320344          640688		125.633
+TOTAL:  2223138         36979   1.663   846408          1692816         81.229
+
+2) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 16 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         16160   0.955   354144          708288          46.920
+WRITE:  531607          10308   1.939   283652          567304		111.812
+TOTAL:  2223138         26468   1.191   637796          1275592         62.438
+
+3) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 16 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         15449   0.913   337024          674048          44.894
+WRITE:  531607          10108   1.901   284076          568152		111.970
+TOTAL:  2223138         25557   1.150   621100          1242200         60.933
+
+4) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 16 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         15581   0.921   340528          681056          45.309
+WRITE:  531607          10092   1.898   283708          567416		111.831
+TOTAL:  2223138         25673   1.155   624236          1248472         61.216
+
+5) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 16 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         15704   0.928   343760          687520          45.691
+WRITE:  531607          10097   1.899   283473          566946		111.743
+TOTAL:  2223138         25801   1.161   627233          1254466         61.486
+
+6) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 16 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         15781   0.933   346368          692736          46.000
+WRITE:  531607          10091   1.898   282507          565014		111.379
+TOTAL:  2223138         25872   1.164   628875          1257750         61.634
+
+7) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 16 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         15769   0.932   346000          692000          45.956
+WRITE:  531607          10104   1.901   283240          566480		111.655
+TOTAL:  2223138         25873   1.164   629240          1258480         61.666 
+
+8) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 16 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         15798   0.934   346816          693632          46.053
+WRITE:  531607          10107   1.901   283099          566198		111.602
+TOTAL:  2223138         25905   1.165   629915          1259830         61.727
+
+
+3. traces/spec92/026.compress.din.gz
+1) gunzip -c traces/spec92/026.compress.din.gz | cachesim 16 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         107982  8.809   2135088         4270176 353.792
+WRITE:  675406          35356   5.235   849340          1698680 256.767
+TOTAL:  1901230         143338  7.539   2984428         5968856 319.324
+
+2) gunzip -c traces/spec92/026.compress.din.gz | cachesim 16 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         101831  8.307   1992768         3985536 330.547
+WRITE:  675406          33671   4.985   808023          1616046 244.520
+TOTAL:  1901230         135502  7.127   2800791         5601582 299.986
+
+3) gunzip -c traces/spec92/026.compress.din.gz | cachesim 16 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         100933  8.234   1976112         3952224 327.825
+WRITE:  675406          33604   4.975   805524          1611048 243.779
+TOTAL:  1901230         134537  7.076   2781636         5563272 297.968
+
+4) gunzip -c traces/spec92/026.compress.din.gz | cachesim 16 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         100460  8.195   1967888         3935776 326.482
+WRITE:  675406          33600   4.975   805760          1611520 243.849
+TOTAL:  1901230         134060  7.051   2773648         5547296 297.127
+
+5) gunzip -c traces/spec92/026.compress.din.gz | cachesim 16 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         100143  8.169   1962656         3925312 325.627
+WRITE:  675406          33584   4.972   805664          1611328 243.820
+TOTAL:  1901230         133727  7.034   2768320         5536640 296.565
+
+6) gunzip -c traces/spec92/026.compress.din.gz | cachesim 16 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         98685   8.051   1938656         3877312 321.705
+WRITE:  675406          33708   4.991   806188          1612376 243.976
+TOTAL:  1901230         132393  6.964   2744844         5489688 294.092
+
+7) gunzip -c traces/spec92/026.compress.din.gz | cachesim 16 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         98127   8.005   1930400         3860800 320.356
+WRITE:  675406          33597   4.974   804557          1609114 243.493
+TOTAL:  1901230         131724  6.928   2734957         5469914 293.050
+
+8) gunzip -c traces/spec92/026.compress.din.gz | cachesim 16 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         97878   7.985   1925392         3850784 319.538
+WRITE:  675406          33577   4.971   805385          1610770 243.738
+TOTAL:  1901230         131455  6.914   2730777         5461554 292.610
+
+9) gunzip -c traces/spec92/026.compress.din.gz | cachesim 16 32 256 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         97752   7.974   1923840         3847680 319.284
+WRITE:  675406          33581   4.972   804669          1609338 243.526
+TOTAL:  1901230         131333  6.908   2728509         5457018 292.371
+
+10) gunzip -c traces/spec92/026.compress.din.gz | cachesim 16 32 512 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         97504   7.954   1922560         3845120 319.074
+WRITE:  675406          33595   4.974   801803          1603606 242.677
+TOTAL:  1901230         131099  6.895   2724363         5448726 291.934
+
+4. traces/spec92/047.tomcatv.din.gz
+1) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 16 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         35096   1.627   796640          1593280 78.937
+WRITE:  463854          43168   9.306   1208496         2416992 526.533
+TOTAL:  2621143         78264   2.986   2005136         4010272 158.146
+
+2) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 16 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         14213   0.659   363136          726272  38.699
+WRITE:  463854          45209   9.746   1363593         2727186 593.428
+TOTAL:  2621143         59422   2.267   1726729         3453458 136.867
+
+3) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 16 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         16684   0.773   400128          800256  42.134
+WRITE:  463854          45893   9.894   1388309         2776618 604.092
+TOTAL:  2621143         62577   2.387   1788437         3576874 141.582
+
+4) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 16 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         6384    0.296   155200          310400          19.403
+WRITE:  463854          42917   9.252   1368885         2737770 595.685
+TOTAL:  2621143         49301   1.881   1524085         3048170 121.386
+
+5) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 16 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         5424    0.251   135104          270208          17.538
+WRITE:  463854          36769   7.927   1168417         2336834 509.183
+TOTAL:  2621143         42193   1.610   1303521         2607042 104.543
+
+6) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 16 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         5417    0.251   121920          243840  16.316
+WRITE:  463854          36769   7.927   1180481         2360962 514.385
+TOTAL:  2621143         42186   1.609   1302401         2604802 104.457
+
+7) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 16 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         5426    0.252   127312          254624  16.816
+WRITE:  463854          36769   7.927   1175233         2350466 512.122
+TOTAL:  2621143         42195   1.610   1302545         2605090 104.468
+
+8) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 16 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         5429    0.252   128448          256896  16.921
+WRITE:  463854          36769   7.927   1174145         2348290 511.653
+TOTAL:  2621143         42198   1.610   1302593         2605186 104.472
+
+9) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 16 32 256 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         5429    0.252   131632          263264  17.216
+WRITE:  463854          36769   7.927   1170849         2341698 510.231
+TOTAL:  2621143         42198   1.610   1302481         2604962 104.463
+
+10) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 16 32 512 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes   Average time(ns)
+READ:   2157289         5429    0.252   137808          275616  17.789
+WRITE:  463854          36769   7.927   1164689         2329378 507.575
+TOTAL:  2621143         42198   1.610   1302497         2604994 104.464
+
+5. 056.ear.din.gz
+1) gunzip -c traces/spec92/056.ear.din.gz | cachesim 16 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         14167   0.835   382992          765984          50.171
+WRITE:  940291          13161   1.400   387753          775506          87.545
+TOTAL:  2637617         27328   1.036   770745          1541490         63.494
+
+2) gunzip -c traces/spec92/056.ear.din.gz | cachesim 16 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         1982    0.117   52720           105440          11.218
+WRITE:  940291          3542    0.377   91334           182668          24.446
+TOTAL:  2637617         5524    0.209   144054          288108          15.934
+
+3) gunzip -c traces/spec92/056.ear.din.gz | cachesim 16 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         998     0.059   27456           54912           8.238
+WRITE:  940291          2953    0.314   81657           163314          22.384
+TOTAL:  2637617         3951    0.150   109113          218226          13.281
+
+4) gunzip -c traces/spec92/056.ear.din.gz | cachesim 16 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         938     0.055   26400           52800           8.114
+WRITE:  940291          2935    0.312   81015           162030          22.248
+TOTAL:  2637617         3873    0.147   107415          214830          13.152
+
+5) gunzip -c traces/spec92/056.ear.din.gz | cachesim 16 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         928     0.055   25312           50624           7.985
+WRITE:  940291          2934    0.312   81814           163628          22.417
+TOTAL:  2637617         3862    0.146   107126          214252          13.130
+
+6) gunzip -c traces/spec92/056.ear.din.gz | cachesim 16 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         911     0.054   25632           51264           8.023
+WRITE:  940291          2934    0.312   81078           162156          22.261
+TOTAL:  2637617         3845    0.146   106710          213420          13.099
+
+7) gunzip -c traces/spec92/056.ear.din.gz | cachesim 16 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         910     0.054   23792           47584           7.806
+WRITE:  940291          2934    0.312   82886           165772          22.645
+TOTAL:  2637617         3844    0.146   106678          213356          13.096
+
+8) gunzip -c traces/spec92/056.ear.din.gz | cachesim 16 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         910     0.054   25920           51840           8.057
+WRITE:  940291          2934    0.312   80758           161516          22.193
+TOTAL:  2637617         3844    0.146   106678          213356          13.096
+
+9) gunzip -c traces/spec92/056.ear.din.gz | cachesim 16 32 256 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         910     0.054   25792           51584           8.042
+WRITE:  940291          2934    0.312   80886           161772          22.220
+TOTAL:  2637617         3844    0.146   106678          213356          13.096
+
+10) gunzip -c traces/spec92/056.ear.din.gz | cachesim 16 32 512 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         909     0.054   23008           46016           7.714
+WRITE:  940291          2934    0.312   83638           167276          22.805
+TOTAL:  2637617         3843    0.146   106646          213292          13.094
+
+II) 64 KB cache
+1. traces/spec92/008.espresso.din.gz
+1) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 64 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         1288    0.092   26192           52384           8.740
+WRITE:  330960          1529    0.462   28041           56082           21.968
+TOTAL:  1733272         2817    0.163   54233           108466          11.266
+
+2) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 64 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         333     0.024   5376            10752           5.768
+WRITE:  330960          1228    0.371   20908           41816           17.653
+TOTAL:  1733272         1561    0.090   26284           52568           8.037
+
+3) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20890           41780           17.642
+TOTAL:  1733272         1558    0.090   26202           52404           8.028
+
+4) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 64 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20842           41684           17.613
+TOTAL:  1733272         1558    0.090   26154           52308           8.022
+ 
+5) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 64 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20842           41684           17.613
+TOTAL:  1733272         1558    0.090   26154           52308           8.022
+
+6) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 64 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20842           41684           17.613
+TOTAL:  1733272         1558    0.090   26154           52308           8.022
+
+7) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 64 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20842           41684           17.613
+TOTAL:  1733272         1558    0.090   26154           52308           8.022
+
+2. traces/spec92/023.eqntott.din.gz
+1) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         6641    0.393   153968          307936          23.224
+WRITE:  531607          8566    1.611   239142          478284          95.050
+TOTAL:  2223138         15207   0.684   393110          786220          40.400
+
+2) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         3903    0.231   106512          213024          17.605
+WRITE:  531607          8653    1.628   234365          468730          93.254
+TOTAL:  2223138         12556   0.565   340877          681754          35.695
+
+3) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         3420    0.202   94160           188320          16.143
+WRITE:  531607          8549    1.608   233765          467530          93.027
+TOTAL:  2223138         11969   0.538   327925          655850          34.528
+
+4) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         3193    0.189   88432           176864          15.465
+WRITE:  531607          8494    1.598   233134          466268          92.789
+TOTAL:  2223138         11687   0.526   321566          643132          33.955
+
+5) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         3178    0.188   87792           175584          15.390
+WRITE:  531607          8480    1.595   232272          464544          92.465
+TOTAL:  2223138         11658   0.524   320064          640128          33.820
+
+6) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         3150    0.186   87440           174880          15.348
+WRITE:  531607          8488    1.597   232232          464464          92.450
+TOTAL:  2223138         11638   0.523   319672          639344          33.785
+
+7) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         3181    0.188   88704           177408          15.497
+WRITE:  531607          8498    1.599   232322          464644          92.484
+TOTAL:  2223138         11679   0.525   321026          642052          33.907
+
+8) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         3168    0.187   87888           175776          15.401
+WRITE:  531607          8509    1.601   233069          466138          92.765
+TOTAL:  2223138         11677   0.525   320957          641914          33.900
+
+9) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 256 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         3170    0.187   87760           175520          15.386
+WRITE:  531607          8510    1.601   233230          466460          92.825
+TOTAL:  2223138         11680   0.525   320990          641980          33.903
+
+10) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 512 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         3179    0.188   88160           176320          15.433
+WRITE:  531607          8514    1.602   233202          466404          92.815
+TOTAL:  2223138         11693   0.526   321362          642724          33.937
+
+11) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 1024 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1691531         3180    0.188   88048           176096          15.420
+WRITE:  531607          8508    1.600   233196          466392          92.813
+TOTAL:  2223138         11688   0.526   321244          642488          33.926
+
+12) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 2048 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes
+Average time(ns)
+READ:   1691531         3211    0.190   89120           178240          15.547
+WRITE:  531607          8502    1.599   232934          465868          92.714
+TOTAL:  2223138         11713   0.527   322054          644108          33.999
+
+3. traces/spec92/026.compress.din.gz
+1) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         70587   5.758   1482768         2965536 247.210
+WRITE:  675406          28556   4.228   734668          1469336 222.760
+TOTAL:  1901230         99143   5.215   2217436         4434872 238.524
+
+2) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         65188   5.318   1396784         2793568 233.159
+WRITE:  675406          28399   4.205   722943          1445886 219.287
+TOTAL:  1901230         93587   4.922   2119727         4239454 228.231
+
+3) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         63019   5.141   1366416         2732832 228.195
+WRITE:  675406          28058   4.154   713242          1426484 216.412
+TOTAL:  1901230         91077   4.790   2079658         4159316 224.009
+
+4) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         62111   5.067   1351280         270256	225.722
+WRITE:  675406          28055   4.154   712279          1424558 216.126
+TOTAL:  1901230         90166   4.743   2063559         4127118 222.313
+
+5) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         61962   5.055   1351808         2703616 225.808
+WRITE:  675406          28043   4.152   708907          1417814 215.128
+TOTAL:  1901230         90005   4.734   2060715         4121430 222.014
+
+6) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         61921   5.051   1348272         2696544 225.231
+WRITE:  675406          28060   4.155   711980          1423960 216.038
+TOTAL:  1901230         89981   4.733   2060252         4120504 221.965
+
+7) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         61817   5.043   1346368         2692736 224.920
+WRITE:  675406          28044   4.152   711676          1423352 215.948
+TOTAL:  1901230         89861   4.726   2058044         4116088 221.732
+
+8) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         60788   4.959   1328672         2657344 222.028
+WRITE:  675406          28040   4.152   710904          1421808 215.719
+TOTAL:  1901230         88828   4.672   2039576         4079152 219.787
+
+9) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 256 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         60504   4.936   1323760         2647520 221.226
+WRITE:  675406          28025   4.149   709897          1419794 215.421
+TOTAL:  1901230         88529   4.656   2033657         4067314 219.163
+
+10) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 512 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         60353   4.923   1321456         2642912 220.849
+WRITE:  675406          28027   4.150   709819          1419638 215.398
+TOTAL:  1901230         88380   4.649   2031275         4062550 218.913
+
+11) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 1024 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         60355   4.924   1320736         2641472 220.732
+WRITE:  675406          28026   4.150   710474          1420948 215.592
+TOTAL:  1901230         88381   4.649   2031210         4062420 218.906
+
+12) gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 2048 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1225824         60300   4.919   1320000         2640000 220.611
+WRITE:  675406          28008   4.147   709896          1419792 215.420
+TOTAL:  1901230         88308   4.645   2029896         4059792 218.767
+
+4. traces/spec92/047.tomcatv.din.gz
+1) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         26458   1.226   529280          1058560 54.130
+WRITE:  463854          39662   8.551   1202478         2404956 523.900
+TOTAL:  2621143         66120   2.523   1731758         3463516 137.264
+
+2) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         2589    0.120   77872           155744  12.225
+WRITE:  463854          36835   7.941   1172483         2344966 510.937
+TOTAL:  2621143         39424   1.504   1250355         2500710 100.481
+
+3) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         2243    0.104   63840           127680          10.924
+WRITE:  463854          36750   7.923   1173614         2347228		511.423
+TOTAL:  2621143         38993   1.488   1237454         2474908         99.495
+
+4) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         2243    0.104   63424           126848          10.885
+WRITE:  463854          36751   7.923   1173807         2347614		511.507
+TOTAL:  2621143         38994   1.488   1237231         2474462         99.478
+
+5) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         2242    0.104   65248           130496          11.054
+WRITE:  463854          36752   7.923   1171984         2343968		510.721
+TOTAL:  2621143         38994   1.488   1237232         2474464         99.478
+
+6) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         2243    0.104   68848           137696          11.388
+WRITE:  463854          36752   7.923   1166624         2333248		508.410
+TOTAL:  2621143         38995   1.488   1235472         2470944         99.344
+
+7) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         2246    0.104   67328           134656          11.247
+WRITE:  463854          36754   7.924   1168050         2336100		509.024
+TOTAL:  2621143         39000   1.488   1235378         2470756         99.337
+
+8) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         2246    0.104   64848           129696          11.017
+WRITE:  463854          36754   7.924   1170274         2340548		509.983
+TOTAL:  2621143         39000   1.488   1235122         2470244         99.317
+
+9) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 256 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         2246    0.104   66016           132032          11.125
+WRITE:  463854          36755   7.924   1168931         2337862		509.404
+TOTAL:  2621143         39001   1.488   1234947         2469894         99.304
+
+10) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 512 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         2246    0.104   64864           129728          11.019
+WRITE:  463854          36755   7.924   1170051         2340102		509.887
+TOTAL:  2621143         39001   1.488   1234915         2469830         99.302
+
+11) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 1024 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         2245    0.104   62432           124864          10.793
+WRITE:  463854          36755   7.924   1172435         2344870		510.915
+TOTAL:  2621143         39000   1.488   1234867         2469734         99.298
+
+12) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 2048 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   2157289         2245    0.104   70720           141440          11.562
+WRITE:  463854          36755   7.924   1164163         2328326		507.349
+TOTAL:  2621143         39000   1.488   1234883         2469766         99.299
+
+5. 056.ear.din.gz
+1) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         877     0.052   22672           45344           7.674
+WRITE:  940291          3012    0.320   65492           130984          18.946
+TOTAL:  2637617         3889    0.147   88164           176328          11.692
+
+2) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         577     0.034   12752           25504           6.504
+WRITE:  940291          2934    0.312   67910           135820          19.460
+TOTAL:  2637617         3511    0.133   80662           161324          11.123
+
+3) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         576     0.034   12720           25440           6.501
+WRITE:  940291          2934    0.312   67878           135756          19.453
+TOTAL:  2637617         3510    0.133   80598           161196          11.118
+
+4) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         576     0.034   12720           25440           6.501
+WRITE:  940291          2934    0.312   67990           135980          19.477
+TOTAL:  2637617         3510    0.133   80710           161420          11.127
+
+5) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         576     0.034   12688           25376           6.497
+WRITE:  940291          2934    0.312   67990           135980          19.477
+TOTAL:  2637617         3510    0.133   80678           161356          11.124
+
+6) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         576     0.034   12656           25312           6.493
+WRITE:  940291          2934    0.312   68102           136204          19.501
+TOTAL:  2637617         3510    0.133   80758           161516          11.130
+
+7) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         576     0.034   12656           25312           6.493
+WRITE:  940291          2934    0.312   68086           136172          19.498
+TOTAL:  2637617         3510    0.133   80742           161484          11.129
+
+8) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         576     0.034   12704           25408           6.499
+WRITE:  940291          2934    0.312   68182           136364          19.518
+TOTAL:  2637617         3510    0.133   80886           161772          11.140
+
+9) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 256 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         576     0.034   12720           25440           6.501
+WRITE:  940291          2934    0.312   68182           136364          19.518
+TOTAL:  2637617         3510    0.133   80902           161804          11.141
+
+10) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 512 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         576     0.034   12720           25440           6.501
+WRITE:  940291          2934    0.312   68182           136364          19.518
+TOTAL:  2637617         3510    0.133   80902           161804          11.141
+
+11) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 1024 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         576     0.034   12720           25440           6.501
+WRITE:  940291          2934    0.312   68182           136364          19.518
+TOTAL:  2637617         3510    0.133   80902           161804          11.141
+
+12) gunzip -c traces/spec92/056.ear.din.gz | cachesim 64 32 2048 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         576     0.034   12720           25440           6.501
+WRITE:  940291          2934    0.312   68182           136364          19.518
+TOTAL:  2637617         3510    0.133   80902           161804          11.141
+
+III) 128 KB cache
+1. traces/spec92/008.espresso.din.gz
+1) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 128 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         849     0.061   17952           35904           7.563
+WRITE:  330960          1529    0.462   28041           56082           21.968
+TOTAL:  1733272         2378    0.137   45993           91986           10.314
+
+2) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 128 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20858           41716           17.623
+TOTAL:  1733272         1558    0.090   26170           52340           8.024
+
+3) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 128 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes	Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20842           41684           17.613
+TOTAL:  1733272         1558    0.090   26154           52308           8.022
+
+4) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 128 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20842           41684           17.613
+TOTAL:  1733272         1558    0.090   26154           52308           8.022
+
+5) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 128 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20842           41684           17.613
+TOTAL:  1733272         1558    0.090   26154           52308           8.022
+
+6) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 128 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20842           41684           17.613
+TOTAL:  1733272         1558    0.090   26154           52308           8.022
+
+7) gunzip -c traces/spec92/008.espresso.din.gz | cachesim 128 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20842           41684           17.613
+TOTAL:  1733272         1558    0.090   26154           52308           8.022
+
+2. traces/spec92/023.eqntott.din.gz
+1) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 128 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         2435    0.144   63648           127296          12.533
+WRITE:  531607          7984    1.502   194304          388608          78.176
+TOTAL:  2223138         10419   0.469   257952          515904          28.230
+
+2) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 128 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         1291    0.076   35792           71584           9.236
+WRITE:  531607          7692    1.447   187420          374840          75.583
+TOTAL:  2223138         8983    0.404   223212          446424          25.101
+
+3) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 128 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         442     0.026   11504           23008           6.361
+WRITE:  531607          7412    1.394   178196          356392          72.110
+TOTAL:  2223138         7854    0.353   189700          379400          22.084
+
+4) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 128 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         615     0.036   17280           34560           7.045
+WRITE:  531607          7474    1.406   180050          360100          72.808
+TOTAL:  2223138         8089    0.364   197330          394660          22.771
+
+5) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 128 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         629     0.037   17776           35552           7.104
+WRITE:  531607          7369    1.386   176889          353778          71.618
+TOTAL:  2223138         7998    0.360   194665          389330          22.531
+
+6) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 128 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         630     0.037   17808           35616           7.107
+WRITE:  531607          7399    1.392   177815          355630          71.967
+TOTAL:  2223138         8029    0.361   195623          391246          22.617
+
+7) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 128 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         598     0.035   16896           33792           6.999
+WRITE:  531607          7423    1.396   178655          357310          72.283
+TOTAL:  2223138         8021    0.361   195551          391102          22.610
+
+8) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 128 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         614     0.036   17376           34752           7.056
+WRITE:  531607          7428    1.397   178868          357736          72.363
+TOTAL:  2223138         8042    0.362   196244          392488          22.673
+
+9) gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 128 32 256 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         606     0.036   17152           34304           7.030
+WRITE:  531607          7437    1.399   179197          358394          72.487
+TOTAL:  2223138         8043    0.362   196349          392698          22.682
+
+3. traces/spec92/026.compress.din.gz
+1) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         44731   3.649   992768          1985536         167.158
+WRITE:  675406          24764   3.667   653708          1307416         198.758
+TOTAL:  1901230         69495   3.655   1646476         3292952         178.384
+
+2) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         41349   3.373   969312          1938624         163.317
+WRITE:  675406          23120   3.423   604224          1208448         184.093
+TOTAL:  1901230         64469   3.391   1573536         3147072         170.698
+
+3) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         38170   3.114   913328          1826656         154.170
+WRITE:  675406          22966   3.400   599446          1198892         182.677
+TOTAL:  1901230         61136   3.216   1512774         3025548         164.297
+
+4) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         37090   3.026   896352          1792704         151.396
+WRITE:  675406          22785   3.374   592817          1185634         180.713
+TOTAL:  1901230         59875   3.149   1489169         2978338         161.811
+
+5) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         36737   2.997   890464          1780928         150.434
+WRITE:  675406          22773   3.372   591317          1182634         180.268
+TOTAL:  1901230         59510   3.130   1481781         2963562         161.033
+
+6) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         36690   2.993   890512          1781024         150.442
+WRITE:  675406          22777   3.372   590009          1180018         179.881
+TOTAL:  1901230         59467   3.128   1480521         2961042         160.900
+
+7) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         36656   2.990   889648          1779296         150.301
+WRITE:  675406          22775   3.372   590471          1180942         180.018
+TOTAL:  1901230         59431   3.126   1480119         2960238         160.858
+
+8) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         36620   2.987   890064          1780128         150.368
+WRITE:  675406          22814   3.378   590414          1180828         180.001
+TOTAL:  1901230         59434   3.126   1480478         2960956         160.895
+
+9) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 256 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         36192   2.952   880640          1761280         148.829
+WRITE:  675406          22808   3.377   591048          1182096         180.189
+TOTAL:  1901230         59000   3.103   1471688         2943376         159.969
+
+10) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 512 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         36140   2.948   877840          1755680         148.372
+WRITE:  675406          22836   3.381   592836          1185672         180.719
+TOTAL:  1901230         58976   3.102   1470676         2941352         159.863
+
+11) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 1024 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         36077   2.943   875072          1750144         147.920
+WRITE:  675406          22821   3.379   594037          1188074         181.074
+TOTAL:  1901230         58898   3.098   1469109         2938218         159.698
+
+12) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 2048 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         36101   2.945   877904          1755808         148.382
+WRITE:  675406          22800   3.376   591184          1182368         180.229
+TOTAL:  1901230         58901   3.098   1469088         2938176         159.696
+
+13) gunzip -c traces/spec92/026.compress.din.gz | cachesim 128 32 4096 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         36072   2.943   877104          1754208         148.252
+WRITE:  675406          22802   3.376   591810          1183620         180.415
+TOTAL:  1901230         58874   3.097   1468914         2937828         159.677
+
+4. traces/spec92/047.tomcatv.din.gz
+1) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 128 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         24415   1.132   478656          957312          49.432
+WRITE:  463854          39574   8.532   1175846         2351692         512.416
+TOTAL:  2621143         63989   2.441   1654502         3309004         131.365
+
+2) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 128 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         2337    0.108   72336           144672          11.712
+WRITE:  463854          36755   7.924   1147043         2294086         499.967
+TOTAL:  2621143         39092   1.491   1219379         2438758         98.116
+
+3) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 128 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         2224    0.103   70352           140704          11.527
+WRITE:  463854          36731   7.919   1145243         2290486         499.191
+TOTAL:  2621143         38955   1.486   1215595         2431190         97.827
+
+4) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 128 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         2223    0.103   70048           140096          11.499
+WRITE:  463854          36730   7.918   1143370         2286740         498.383
+TOTAL:  2621143         38953   1.486   1213418         2426836         97.661
+
+5) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 128 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         2223    0.103   68320           136640          11.339
+WRITE:  463854          36731   7.919   1143291         2286582         498.349
+TOTAL:  2621143         38954   1.486   1211611         2423222         97.523
+
+6) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 128 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         2222    0.103   67264           134528          11.241
+WRITE:  463854          36732   7.919   1144348         2288696         498.805
+TOTAL:  2621143         38954   1.486   1211612         2423224         97.523
+
+7) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 128 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         2223    0.103   67440           134880          11.257
+WRITE:  463854          36732   7.919   1144204         2288408         498.743
+TOTAL:  2621143         38955   1.486   1211644         2423288         97.526
+
+8) gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 128 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         2226    0.103   67744           135488          11.286
+WRITE:  463854          36734   7.919   1144062         2288124         498.681
+TOTAL:  2621143         38960   1.486   1211806         2423612         97.538
+
+5. 056.ear.din.gz
+1) gunzip -c traces/spec92/056.ear.din.gz | cachesim 128 32 1 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         579     0.034   10512           21024           6.240
+WRITE:  940291          2976    0.316   52304           104608          16.141
+TOTAL:  2637617         3555    0.135   62816           125632          9.770
+
+2) gunzip -c traces/spec92/056.ear.din.gz | cachesim 128 32 2 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         538     0.032   8768            17536           6.035
+WRITE:  940291          2919    0.310   49895           99790           15.628
+TOTAL:  2637617         3457    0.131   58663           117326          9.455
+
+3) gunzip -c traces/spec92/056.ear.din.gz | cachesim 128 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         537     0.032   8704            17408           6.027
+WRITE:  940291          2919    0.310   49735           99470           15.594
+TOTAL:  2637617         3456    0.131   58439           116878          9.438
+
+4) gunzip -c traces/spec92/056.ear.din.gz | cachesim 128 32 8 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         537     0.032   8704            17408           6.027
+WRITE:  940291          2919    0.310   49687           99374           15.584
+TOTAL:  2637617         3456    0.131   58391           116782          9.434
+
+5) gunzip -c traces/spec92/056.ear.din.gz | cachesim 128 32 16 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         537     0.032   8592            17184           6.014
+WRITE:  940291          2918    0.310   49654           99308           15.577
+TOTAL:  2637617         3455    0.131   58246           116492          9.423
+
+6) gunzip -c traces/spec92/056.ear.din.gz | cachesim 128 32 32 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         537     0.032   8592            17184           6.014
+WRITE:  940291          2918    0.310   49606           99212           15.567
+TOTAL:  2637617         3455    0.131   58198           116396          9.419
+
+7) gunzip -c traces/spec92/056.ear.din.gz | cachesim 128 32 64 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         537     0.032   8592            17184           6.014
+WRITE:  940291          2918    0.310   49606           99212           15.567
+TOTAL:  2637617         3455    0.131   58198           116396          9.419
+
+8) gunzip -c traces/spec92/056.ear.din.gz | cachesim 128 32 128 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         537     0.032   8592            17184           6.014
+WRITE:  940291          2918    0.310   49606           99212           15.567
+TOTAL:  2637617         3455    0.131   58198           116396          9.419
+
+9) gunzip -c traces/spec92/056.ear.din.gz | cachesim 128 32 256 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         537     0.032   8592            17184           6.014
+WRITE:  940291          2918    0.310   49606           99212           15.567
+TOTAL:  2637617         3455    0.131   58198           116396          9.419
+
+10) gunzip -c traces/spec92/056.ear.din.gz | cachesim 128 32 512 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1697326         537     0.032   8592            17184           6.014
+WRITE:  940291          2918    0.310   49606           99212           15.567
+TOTAL:  2637617         3455    0.131   58198           116396          9.419
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+II. How do write-back caches compare with write-through caches?
+
+* java files
+I) 64 KB cache
+1. kawa.java.pi100.gz
+gunzip -c traces/java/kawa.java.pi100.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   12047062        66717   0.554   1669056         3338112         32.737
+WRITE:  3195038         24279   0.760   640823          1281646         45.152
+TOTAL:  15242100        90996   0.597   2309879         4619758         35.339
+gunzip -c traces/java/kawa.java.pi100.gz | cachesim 64 32 4 T A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   12047062        66717   0.554   1067472         2134944         22.749
+WRITE:  3195038         24279   0.760   3583502         7167004         229.355
+TOTAL:  15242100        90996   0.597   4650974         9301948         66.058
+
+gunzip -c traces/java/kawa.java.pi100.gz | cachesim 64 32 4 B N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   12047062        87352   0.725   2127984         4255968         40.364
+WRITE:  3195038         64270   2.012   64270           128540          9.023
+TOTAL:  15242100        151622  0.995   2192254         4384508         33.794
+gunzip -c traces/java/kawa.java.pi100.gz | cachesim 64 32 4 T N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   12047062        87352   0.725   1397632         2795264         28.239
+WRITE:  3195038         64270   2.012   3195038         6390076         205.000
+TOTAL:  15242100        151622  0.995   4592670         9185340         65.292
+
+2. linpack.java.gz
+gunzip -c traces/java/linpack.java.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   6302238         29658   0.471   852912          1705824         32.090
+WRITE:  914130          4548    0.498   109732          219464          29.033
+TOTAL:  7216368         34206   0.474   962644          1925288         31.703
+gunzip -c traces/java/linpack.java.gz | cachesim 64 32 4 T A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   6302238         29658   0.471   474528          949056          20.083
+WRITE:  914130          4548    0.498   986898          1973796         220.946
+TOTAL:  7216368         34206   0.474   1461426         2922852         45.527
+
+gunzip -c traces/java/linpack.java.gz | cachesim 64 32 4 B N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   6302238         33981   0.539   951248          1902496         35.215
+WRITE:  914130          5299    0.580   5299            10598           6.159
+TOTAL:  7216368         39280   0.544   956547          1913094         31.534
+gunzip -c traces/java/linpack.java.gz | cachesim 64 32 4 T N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   6302238         33981   0.539   543696          1087392         22.281
+WRITE:  914130          5299    0.580   914130          1828260         205.000
+TOTAL:  7216368         39280   0.544   1457826         2915652         45.427
+
+3. matmult.java.64.gz
+gunzip -c traces/java/matmult.java.64.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   8290939         10169   0.123   218576          437152          10.279
+WRITE:  728530          9453    1.298   204173          408346          61.116
+TOTAL:  9019469         19622   0.218   422749          845498          14.385
+gunzip -c traces/java/matmult.java.64.gz | cachesim 64 32 4 T A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   8290939         10169   0.123   162704          325408          8.931
+WRITE:  728530          9453    1.298   879778          1759556         246.586
+TOTAL:  9019469         19622   0.218   1042482         2084964         28.127
+
+gunzip -c traces/java/matmult.java.64.gz | cachesim 64 32 4 B N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   8290939         16789   0.202   315744          631488          12.627
+WRITE:  728530          71494   9.813   71494           142988          24.627
+TOTAL:  9019469         88283   0.979   387238          774476          13.596
+gunzip -c traces/java/matmult.java.64.gz | cachesim 64 32 4 T N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   8290939         16789   0.202   268624          537248          11.490
+WRITE:  728530          71494   9.813   728530          1457060         205.000
+TOTAL:  9019469         88283   0.979   997154          1994308         27.120
+
+4. qsort.java.50000.gz
+gunzip -c traces/java/qsort.java.50000.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   12628880        16399   0.130   450816          901632          12.146
+WRITE:  1828138         6477    0.354   180909          361818          24.809
+TOTAL:  14457018        22876   0.158   631725          1263450         13.747
+gunzip -c traces/java/qsort.java.50000.gz | cachesim 64 32 4 T A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   12628880        16399   0.130   262384          524768          9.162
+WRITE:  1828138         6477    0.354   1931770         3863540         216.355
+TOTAL:  14457018        22876   0.158   2194154         4388308         35.362
+
+gunzip -c traces/java/qsort.java.50000.gz | cachesim 64 32 4 B N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   12628880        17947   0.142   453408          906816          12.188
+WRITE:  1828138         50646   2.770   50646           101292          10.541
+TOTAL:  14457018        68593   0.474   504054          1008108         11.979
+gunzip -c traces/java/qsort.java.50000.gz | cachesim 64 32 4 T N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   12628880        17947   0.142   287152          574304          9.555
+WRITE:  1828138         50646   2.770   1828138         3656276         205.000
+TOTAL:  14457018        68593   0.474   2115290         4230580         34.269
+
+5. queens.java.10.gz
+gunzip -c traces/java/queens.java.10.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   5460821         5542    0.101   105216          210432          8.859
+WRITE:  832421          14713   1.767   351209          702418          89.471
+TOTAL:  6293242         20255   0.322   456425          912850          19.521
+gunzip -c traces/java/queens.java.10.gz | cachesim 64 32 4 T A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   5460821         5542    0.101   88672           177344          8.253
+WRITE:  832421          14713   1.767   1067829         2135658         261.648
+TOTAL:  6293242         20255   0.322   1156501         2313002         41.770
+
+gunzip -c traces/java/queens.java.10.gz | cachesim 64 32 4 B N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   5460821         20118   0.368   437392          874784          21.038
+WRITE:  832421          46364   5.570   46364           92728           16.140
+TOTAL:  6293242         66482   1.056   483756          967512          20.390
+gunzip -c traces/java/queens.java.10.gz | cachesim 64 32 4 T N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   5460821         20118   0.368   321888          643776          16.807
+WRITE:  832421          46364   5.570   832421          1664842         205.000
+TOTAL:  6293242         66482   1.056   1154309         2308618         41.700
+
+6. wordfreq.java.rev.gz
+gunzip -c traces/java/wordfreq.java.rev.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   9108123         31811   0.349   750688          1501376         21.501
+WRITE:  2746935         14552   0.530   354216          708432          30.816
+TOTAL:  11855058        46363   0.391   1104904         2209808         23.660
+gunzip -c traces/java/wordfreq.java.rev.gz | cachesim 64 32 4 T A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   9108123         31811   0.349   508976          1017952         16.194
+WRITE:  2746935         14552   0.530   2979767         5959534         221.979
+TOTAL:  11855058        46363   0.391   3488743         6977486         63.876
+
+gunzip -c traces/java/wordfreq.java.rev.gz | cachesim 64 32 4 B N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   9108123         45574   0.500   985904          1971808         26.674
+WRITE:  2746935         42371   1.542   42371           84742           8.085
+TOTAL:  11855058        87945   0.742   1028275         2056550         22.367
+gunzip -c traces/java/wordfreq.java.rev.gz | cachesim 64 32 4 T N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   9108123         45574   0.500   729184          1458368         21.037
+WRITE:  2746935         42371   1.542   2746935         5493870         205.000
+TOTAL:  11855058        87945   0.742   3476119         6952238         63.663
+
+* spec92 files
+1. 008.espresso.din.gz
+gunzip -c traces/spec92/008.espresso.din.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   20890           41780           17.642
+TOTAL:  1733272         1558    0.090   26202           52404           8.028
+gunzip -c traces/spec92/008.espresso.din.gz | cachesim 64 32 4 T A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1402312         332     0.024   5312            10624           5.759
+WRITE:  330960          1226    0.370   350576          701152          216.873
+TOTAL:  1733272         1558    0.090   355888          711776          46.070
+
+gunzip -c traces/spec92/008.espresso.din.gz | cachesim 64 32 4 B N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1402312         1500    0.107   24016           48032           8.431
+WRITE:  330960          13930   4.209   13930           27860           13.418
+TOTAL:  1733272         15430   0.890   37946           75892           9.383
+gunzip -c traces/spec92/008.espresso.din.gz | cachesim 64 32 4 T N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1402312         1500    0.107   24000           48000           8.428
+WRITE:  330960          13930   4.209   330960          661920          205.000
+TOTAL:  1733272         15430   0.890   354960          709920          45.963
+
+2. 023.eqntott.din.gz
+gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         3420    0.202   94160           188320          16.143
+WRITE:  531607          8549    1.608   233765          467530          93.027
+TOTAL:  2223138         11969   0.538   327925          655850          34.528
+gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 4 T A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         3420    0.202   54720           109440          11.480
+WRITE:  531607          8549    1.608   668391          1336782         256.541
+TOTAL:  2223138         11969   0.538   723111          1446222         70.080
+
+gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 4 B N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         5178    0.306   110848          221696          18.122
+WRITE:  531607          164206  30.889  164206          328412          66.777
+TOTAL:  2223138         169384  7.619   275054          550108          29.756
+gunzip -c traces/spec92/023.eqntott.din.gz | cachesim 64 32 4 T N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1691531         5178    0.306   82848           165696          14.811
+WRITE:  531607          164206  30.889  531607          1063214         205.000
+TOTAL:  2223138         169384  7.619   614455          1228910         60.290
+
+3. 026.compress.din.gz
+gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         63019   5.141   1366416         2732832         228.195
+WRITE:  675406          28058   4.154   713242          1426484         216.412
+TOTAL:  1901230         91077   4.790   2079658         4159316         224.009
+gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 4 T A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         63019   5.141   1008304         2016608         169.767
+WRITE:  675406          28058   4.154   1124334         2248668         338.143
+TOTAL:  1901230         91077   4.790   2132638         4265276         229.582
+
+gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 4 B N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         59137   4.824   1329072         2658144         222.087
+WRITE:  675406          134725  19.947  134725          269450          44.895
+TOTAL:  1901230         193862  10.197  1463797         2927594         159.140
+gunzip -c traces/spec92/026.compress.din.gz | cachesim 64 32 4 T N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   1225824         59137   4.824   946192          1892384         159.618
+WRITE:  675406          134725  19.947  675406          1350812         205.000
+TOTAL:  1901230         193862  10.197  1621598         3243196         175.740
+
+4. 047.tomcatv.din.gz
+gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 4 B A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         2243    0.104   63840           127680          10.924
+WRITE:  463854          36750   7.923   1173614         2347228         511.423
+TOTAL:  2621143         38993   1.488   1237454         2474908         99.495
+gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 4 T A 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         2243    0.104   35888           71776           8.332
+WRITE:  463854          36750   7.923   1051854         2103708         458.924
+TOTAL:  2621143         38993   1.488   1087742         2175484         88.072
+
+gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 4 B N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         2346    0.109   41824           83648           8.883
+WRITE:  463854          289730  62.461  289730          579460          129.923
+TOTAL:  2621143         292076  11.143  331554          663108          30.303
+gunzip -c traces/spec92/047.tomcatv.din.gz | cachesim 64 32 4 T N 5 200
+Type    Accesses        Misses  %       Transfer        Bytes           Average time(ns)
+READ:   2157289         2346    0.109   37536           75072           8.485
+WRITE:  463854          289730  62.461  463854          927708          205.000
+TOTAL:  2621143         292076  11.143  501390          1002780         43.262
